@@ -4,14 +4,12 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-
 public class PetDisSpec implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	private Long petDisSpecId;
 	private String petDisSpecName;
 	private Set<PetSolu> petSolus = new HashSet<PetSolu>();
-	private String crops;
 	
 	private String type;
 	private String alias;
@@ -24,7 +22,22 @@ public class PetDisSpec implements Serializable{
 	private String color;
 	private String shape;
 	private String description;
-
+	private String sympton;
+	private String form;
+	private String habbits;
+	private String rule;
+	private String cropNames;
+	
+	public String toString(){
+		String output = this.petDisSpecName+" "+this.type+" "+this.cropNames+"\n"+this.description+"\n"+this.sympton+"\n"+this.form+"\n"+this.habbits
+						+"\n"+this.rule+"\n";
+		Set<PetSolu> petSolus =  this.petSolus;
+		for (PetSolu petSolu : petSolus) {
+			output = output + petSolu.getPetSoluDes()+"\n";
+		}
+		output = output +"--------------------------------";
+		return output;
+	}
 	
 	public PetDisSpec(){}
 	public PetDisSpec(String petDisSpecName){
@@ -63,18 +76,11 @@ public class PetDisSpec implements Serializable{
 	public void setPetDisSpecName(String petDisSpecName) {
 		this.petDisSpecName = petDisSpecName;
 	}
-	
 	public Set<PetSolu> getPetSolus() {
 		return petSolus;
 	}
 	public void setPetSolus(Set<PetSolu> petSolus) {
 		this.petSolus = petSolus;
-	}
-	public String getCrops() {
-		return crops;
-	}
-	public void setCrops(String crops) {
-		this.crops = crops;
 	}
 	public String getType() {
 		return type;
@@ -142,7 +148,35 @@ public class PetDisSpec implements Serializable{
 	public void setAlias(String alias) {
 		this.alias = alias;
 	}
-	
-	
+	public String getSympton() {
+		return sympton;
+	}
+	public void setSympton(String sympton) {
+		this.sympton = sympton;
+	}
+	public String getForm() {
+		return form;
+	}
+	public void setForm(String form) {
+		this.form = form;
+	}
+	public String getHabbits() {
+		return habbits;
+	}
+	public void setHabbits(String habbits) {
+		this.habbits = habbits;
+	}
+	public String getRule() {
+		return rule;
+	}
+	public void setRule(String rule) {
+		this.rule = rule;
+	}
+	public String getCropNames() {
+		return cropNames;
+	}
+	public void setCropNames(String cropNames) {
+		this.cropNames = cropNames;
+	}
 	
 }

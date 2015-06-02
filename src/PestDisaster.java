@@ -40,9 +40,9 @@ public class PestDisaster {
 		else {	// 形态特征若空，代表是病害
 			this.type = "病害";
 			// 病害的话 read in the line for 危害特征，摘入危害特征的内容放入 color 栏下
-			String bhtz[] = lines.get(lines.size()-8).split(":", 2);
-			String bhtzContent = bhtz[1].trim();
-			this.color = bhtzContent;
+			String whtz[] = lines.get(lines.size()-8).split(":", 2);
+			String whtzContent = whtz[1].trim();
+			this.color = whtzContent;
 		}
 		
 		if (xttzContent.length()>7000) { // 处理异常情况，见 草莓灰斑病， 目测有2项

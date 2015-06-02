@@ -1,2 +1,5 @@
 # Updates Log File
 
+@希遥 我看了眼CPProduct的model，有一个问题是爬下来的data中很多产品是没有名字的，也就是CPProductName是空的，你的model里这是一个unique key not null的，导入会有问题。实际data中产品注册号是一个unique identification，应该在CPProduct类里加一个variable叫registerationID，把这个设置成unique key应该就行了
+
+还有在CPProduct里面的crop和disease都只是String，并没有引用Crop和PetDisSpec类，是先这样导一遍以后再说么？
