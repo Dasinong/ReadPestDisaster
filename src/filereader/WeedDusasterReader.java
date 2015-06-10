@@ -30,8 +30,8 @@ public class WeedDusasterReader {
 //		wReader.readFile();
 		
 		// Test on sample
-		wReader.testFunctions();
-//		wReader.testTemp();
+//		wReader.testFunctions();
+		wReader.testTemp();
 		
 //		wReader.generateSample();
 //		File currentDirectory = new File("").getAbsoluteFile();
